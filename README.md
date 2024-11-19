@@ -1,15 +1,14 @@
 # Matchify
 **Coming Soon** 🚧
 
-A full-stack web application built with cutting-edge technologies. This project is currently in its **early development stage**, with exciting features planned for implementation.
+<p align="center"> A full-stack web application built with cutting-edge technologies. This project is currently in its **early development stage**, with exciting features planned for implementation. </p>
 
----
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8363600f-a877-48be-9a95-8cd7a0a696f1" alt="matchify_coming_soon" width="400"/>
 </p>
 
----
 
 ## Features
 
