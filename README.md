@@ -1,5 +1,7 @@
 # Matchify
+<h4 align="center">
 **Coming Soon** 🚧
+</h4>
 
 <h4 align="center"> A full-stack web application built with cutting-edge technologies. This project is currently in its **early development stage**, with exciting features planned for implementation. </h4>
 
