@@ -1,4 +1,5 @@
-# Matchify
+<h1 align="center"> Matchify</h1>
+
 <h4 align="center">
 **Coming Soon** 🚧
 </h4>
