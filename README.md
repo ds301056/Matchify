@@ -1,7 +1,7 @@
 # Matchify
 **Coming Soon** 🚧
 
-<p align="center"> A full-stack web application built with cutting-edge technologies. This project is currently in its **early development stage**, with exciting features planned for implementation. </p>
+<h4 align="center"> A full-stack web application built with cutting-edge technologies. This project is currently in its **early development stage**, with exciting features planned for implementation. </h4>
 
 
 
