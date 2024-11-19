@@ -1,4 +1,4 @@
-##Matchify
+Matchify
 Coming Soon 🚧
 
 A full-stack web application built with cutting-edge technologies. This project is currently in its early development stage, with exciting features planned for implementation.
