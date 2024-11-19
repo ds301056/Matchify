@@ -29,7 +29,7 @@ A full-stack web application built with cutting-edge technologies. This project 
 
 ### DevOps:
 - Optimized workflow using Visual Studio Code.
-- Deployment to a production environment.
+- Deployment to a production environment. (subdomain of devHorizon.io)
 
 ---
 
