@@ -20,7 +20,7 @@ public class UsersController(DataContext context) : ControllerBase
 
   }
 
-    [HttpGet("{id}")] // api/users/{id}
+    [HttpGet("{id:int}")] // api/users/{id}
   public ActionResult<AppUser> GetUser(int id)
   {
     // return list of users 
