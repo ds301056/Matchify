@@ -21,12 +21,14 @@ public class UsersController(DataContext context) : ControllerBase
   }
 
     [HttpGet("{id}")] // api/users/{id}
-  public ActionResult<IEnumerable<AppUser>> GetUser(int id)
+  public ActionResult<AppUser> GetUser(int id)
   {
     // return list of users 
-    var users = context.Users.ToList();
+    var user = context.Users.Find(id); // get user by id 
 
-    return users;
+    if (user == null) return NotFound(); // if user not found return 404
+
+    return user;
 
   }
 
