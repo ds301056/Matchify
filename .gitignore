@@ -398,3 +398,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+API/dating.db
+API/dating.db-shm
+API/dating.db-wal
