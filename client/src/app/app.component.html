@@ -1,1 +1,8 @@
 <h1>{{ title }}</h1>
+
+<ul>
+  <!-- Loop through the users array and display each user -->
+  @for (user of users; track user.id) {
+  <li>{{ user.id }} - {{ user.userName }}</li>
+  }
+</ul>
