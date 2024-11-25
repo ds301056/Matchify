@@ -398,3 +398,11 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+
+#.net specific files
+# Exclude all bin directories
+**/bin/
+
+# Exclude all obj directories
+**/obj/
