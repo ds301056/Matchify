@@ -40,3 +40,14 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+#.net specific files
+# Exclude all bin directories
+**/bin/
+
+# Exclude all obj directories
+**/obj/
+
+API/dating.db
+API/dating.db-shm
+API/dating.db-wal
