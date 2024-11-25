@@ -406,3 +406,8 @@ FodyWeavers.xsd
 
 # Exclude all obj directories
 **/obj/
+
+API/dating.db
+API/dating.db-shm
+API/dating.db-wal
+
