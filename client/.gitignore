@@ -51,3 +51,8 @@ Thumbs.db
 API/dating.db
 API/dating.db-shm
 API/dating.db-wal
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
