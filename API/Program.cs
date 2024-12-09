@@ -1,8 +1,12 @@
 using API.Data;
+using API.Interfaces;
+using API.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+// Add services to the container
 builder.Services.AddControllers();
 
 // Add detailed error handling and logging
@@ -11,9 +15,9 @@ builder.Services.AddDbContext<DataContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-
-//ADD CORS POLICY
-builder.Services.AddCors();
+builder.Services.AddCors(); // add cors service
+// how long do we want the service to live for?
+builder.Services.AddScoped<ITokenService, TokenService>(); // add token service
 
 
 var app = builder.Build();
