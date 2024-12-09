@@ -10,4 +10,9 @@ public class AppUser
 
   public required string UserName { get; set; } // username is a string & required
 
+  public required byte[] PasswordHash { get; set; } // for storing the password hash
+
+  public required byte[] PasswordSalt { get; set; } // for storing the password salt
+
+
 }
