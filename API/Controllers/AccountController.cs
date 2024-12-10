@@ -3,17 +3,19 @@ using System.Text; // import text namespace
 using API.Data; // import data namespace
 using API.DTOs;
 using API.Entities; // import entities namespace
+using API.Interfaces;
+using API.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore; // import mvc namespace
 
 namespace API.Controllers;
 
-public class AccountController(DataContext context) : BaseApiController // controller for account
+public class AccountController(DataContext context, ITokenService tokenService) : BaseApiController // controller for account
 {
   [HttpPost("register")] // account/register
 
   // method to register user
-  public async Task<ActionResult<AppUser>> Register(RegisterDto registerDto) 
+  public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto) 
   {
     if (await UserExists(registerDto.Username)) return BadRequest("Username is taken"); // check if user exists
 
@@ -29,12 +31,15 @@ public class AccountController(DataContext context) : BaseApiController // contr
     context.Users.Add(user); // add user to database
     await context.SaveChangesAsync(); // save changes
 
-    return user; // return user
+    return new UserDto{
+      Username = user.UserName,
+      Token = tokenService.CreateToken(user) // create token
+    }; // return user
   }
 
   // login endpoint 
   [HttpPost("login")] 
-  public async Task<ActionResult<AppUser>> Login(LoginDto loginDto) // login method
+  public async Task<ActionResult<UserDto>> Login(LoginDto loginDto) // login method
   {
     var user = await context.Users.FirstOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower()); // get user
 
@@ -48,7 +53,11 @@ public class AccountController(DataContext context) : BaseApiController // contr
     {
       if (computedHash[i] != user.PasswordHash[i]) return Unauthorized("Invalid password"); // return if password is invalid
     }
-    return user; // return user if username and password is valid
+    return new UserDto
+    {
+      Username = user.UserName,
+      Token = tokenService.CreateToken(user) // create token
+    }; // return user
   }
 
 
